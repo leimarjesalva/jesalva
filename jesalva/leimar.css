@@ -1,10 +1,17 @@
 body {
+  height: 100%;
+  margin-right: 0;
+  /* The image used */
   background-image: url("un.gif");
-  background-size: 100%;
-  background-position: center;
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
   background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
-  font-family: 'Alfa Slab One';font-size: 22px;
+  background-size: cover;
 }
 
 h1 {
