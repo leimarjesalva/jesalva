@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="leimar.css">
+<style>
+.flex-container {
+  display: flex;
+}
+
+.flex-container > div {
+  
+  background-color: white;
+ margin:80px;
+ padding: 5px;
+
+}
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 3px 3px;
+  cursor: pointer;
+}
+
+
+</style>
+</head>
+<body>
+<center>
+  
+	<header>HEADER</header>
+<h1>CSS FLEX BOX GALLERY</h1>
+
+<div class="flex-container">
+
+  <div><img src="1a.jpg" alt="Italian Trulli"><p>Across the City</p>
+<a href="https://www.pexels.com/photo/low-angle-shot-of-a-street-and-modern-skyscrapers-5869892/" class="button">Visit Link</a></button></div>
+
+  <div><img src="1b.jpg" alt="Italian Trulli"><p>Photographer</p><a href="https://www.pexels.com/photo/person-holding-a-camera-7490540/" class="button">Visit Link</a></button></div>
+
+  <div><img src="1c.jpg" alt="Italian Trulli"><p>Camera and Me</p><a href="https://www.pexels.com/photo/woman-holding-camera-3585013/" class="button">Visit Link</a></button></div>
+
+  <div><img src="1d.jpg" alt="Italian Trulli"><p>Behind the News</p><a href="https://www.pexels.com/photo/portrait-of-an-african-man-holding-burning-paper-19595502/" class="button">Visit Link</a></button></div>
+
+  <div><img src="1e.jpg" alt="Italian Trulli"><p>Green Land</p><a href="https://www.pexels.com/photo/a-dark-forest-with-trees-and-fog-19977685/" class="button">Visit Link</a></button></div>
+
+  <div><img src="2a.jpg" alt="Italian Trulli"><p>Woman in traditional clothing</p><a href="https://www.pexels.com/photo/a-woman-in-traditional-clothing-is-standing-in-the-desert-19961138/" class="button">Visit Link</a></button></div>
+
+  <div><img src="2b.jpg" alt="Italian Trulli"><p>Moose in the Snow</p><a href="https://www.pexels.com/photo/moose-in-the-snow-19972137/" class="button">Visit Link</a></button></div>
+
+  <div><img src="2c.jpg" alt="Italian Trulli"><p>A Fig Opuntia</p><a href="#" class="button">Visit Link</a></button></div>
+
+  <div><img src="2d.jpg" alt="Italian Trulli"><p>太阳和树</p><a href="https://www.pexels.com/photo/19056104/" class="button">Visit Link</a></button></div>
+
+  <div><img src="2e.jpg" alt="Italian Trulli"><p>Bird Perching on Antenna</p><a href="https://www.pexels.com/photo/bird-perching-on-antenna-at-golden-sunset-14781473/" class="button">Visit Link</a></button></div>
+
+  <div><img src="c2.jpg" alt="Italian Trulli"><p>Silhouetted Road</p><a href="https://www.pexels.com/photo/sunset-sky-and-silhouetted-road-13651479/" class="button">Visit Link</a></button></div>
+
+  <div><img src="c3.jpg" alt="Italian Trulli"><p>Facade Detail</p><a href="https://www.pexels.com/photo/facade-detail-duomo-florence-florence-italy-14983437/" class="button">Visit Link</a></button></div>
+
+  <div><img src="c4.jpg" alt="Italian Trulli"><p>A mountain stream</p><a href="https://www.pexels.com/photo/a-mountain-stream-is-flowing-through-a-forest-19861151/" class="button">Visit Link</a></button></div>
+
+  <div><img src="d1.jpg" alt="Italian Trulli"><p>Bridge Near a Rock Formation</p><a href="https://www.pexels.com/photo/a-bridge-near-a-rock-formation-11719062/" class="button">Visit Link</a></button></div>
+
+  <div><img src="d2.jpg" alt="Italian Trulli"><p>Woman in White Dress</p><a href="https://www.pexels.com/photo/woman-in-white-dress-walking-on-a-beach-sand-with-a-pair-of-sneakers-in-hand-18444259/" class="button">Visit Link</a></button></div>
+
+  <div><img src="d3.jpg" alt="Italian Trulli"><p>Portrait of Brunette Woman</p><a href="https://www.pexels.com/photo/portrait-of-brunette-woman-wearing-black-dress-19749008/" class="button">Visit Link</a></button></div>
+
+  <div><img src="d4.jpg" alt="Italian Trulli"><p>Young Fashionable Man</p><a href="https://www.pexels.com/photo/young-fashionable-man-wearing-a-cap-backwards-13020506/" class="button">Visit Link</a></button></div>
+
+  <div><img src="e1.jpg" alt="Italian Trulli"><p>연꽃</p><a href="https://www.pexels.com/photo/19845794/" class="button">Visit Link</a></button></div>
+  <div><img src="e2.jpg" alt="Italian Trulli"><p>Leaves behind Opaque Leaves</p><a href="https://www.pexels.com/photo/leaves-behind-opaque-leaves-19891532/" class="button">Visit Link</a></button></div>
+  <div><img src="e4.jpg" alt="Italian Trulli"><p>A city street </p><a href="https://www.pexels.com/photo/a-city-street-with-cars-and-buildings-in-the-background-19850845/" class="button">Visit Link</a></button></div>
+
+
+</div>
+
+</body>
+</html>

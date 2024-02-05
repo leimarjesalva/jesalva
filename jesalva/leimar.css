@@ -1,25 +1,32 @@
 body {
-  background-color: white;
-
+  background-image: url("un.gif");
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Alfa Slab One';font-size: 22px;
 }
 
 h1 {
-  color: black;
+  font-family: 'Honk';font-size: 50px;
+  color: white;
   text-align: center;
 }
 
 p {
-  font-family: verdana;
+  color: white;
+  font-family: 'Honk';font-size: 22px;
   font-size: 20px;
 }
 
 header{
-  font-size: 50px;
+font-family: 'Honk';font-size: 100px;
+  font-size: 100px;
   color: white;
-  background-color: black;
 }
 div {
   flex-wrap: wrap;
+
 }
 img {
   width: 300px;
