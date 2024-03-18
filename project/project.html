@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password], input[type=file] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+  
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 10px 0 10px 0;
+  position: relative;
+}
+
+.icon {
+  display: block;
+  width: 80px; /* Adjust the size of the circle */
+  height: 80px; /* Adjust the size of the circle */
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden; /* Ensures the image is clipped within the circle */
+}
+
+.container {
+  padding: 16px;
+  max-width: 400px; /* Adjust this value as needed */
+  margin: 0 auto; /* Centers the container */
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.change-profile-label {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+
+}
+</style>
+<script>
+function calculateAge() {
+  var birthdate = document.getElementById('birthdate').value;
+  var birthdateParts = birthdate.split('-');
+  var birthday = new Date(birthdateParts[0], birthdateParts[1] - 1, birthdateParts[2]);
+  var differenceInMS = Date.now() - birthday.getTime();
+  var ageDate = new Date(differenceInMS);
+  var age = Math.abs(ageDate.getUTCFullYear() - 1970);
+  document.getElementById('age').value = age;
+}
+
+function capitalizeFirstLetter(fieldId) {
+  var field = document.getElementById(fieldId);
+  var fieldValue = field.value;
+  if (fieldValue.length > 0) {
+    field.value = fieldValue.charAt(0).toUpperCase() + fieldValue.slice(1);
+  }
+}
+
+function changeProfilePicture(input) {
+  var file = input.files[0];
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var img = document.getElementById('profilePic');
+    img.src = e.target.result;
+    var imgWidth = img.width;
+    var imgHeight = img.height;
+    var maxSize = Math.max(imgWidth, imgHeight);
+    img.style.width = (imgWidth / maxSize) * 80 + 'px'; /* Adjust the size of the circle */
+    img.style.height = (imgHeight / maxSize) * 80 + 'px'; /* Adjust the size of the circle */
+  };
+  reader.readAsDataURL(file);
+}
+</script>
+</head>
+<body>
+
+<h2>Login Form</h2>
+
+<form action="/action_page.php" method="post" enctype="multipart/form-data">
+  <div class="imgcontainer">
+    <img id="profilePic" src="3.png" alt="Profile Picture" class="icon">
+    <label for="profile_pic" class="change-profile-label"><b>Change Profile Picture</b></label>
+    <input type="file" id="profile_pic" name="profile_pic" accept="image/*" onchange="changeProfilePicture(this)" style="display: none;">
+  </div>
+
+  <div class="container">
+    <label for="fname"><b>First Name</b></label>
+    <input type="text" id="fname" name="firstname" required onblur="capitalizeFirstLetter('fname')">
+    <label for="mname"><b>Middle Name</b></label>
+    <input type="text" id="mname" name="middlename" required onblur="capitalizeFirstLetter('mname')">
+    <label for="lname"><b>Last Name</b></label>
+    <input type="text" id="lname" name="lastname" required onblur="capitalizeFirstLetter('lname')">
+
+    <label for="gender"><b>Gender</b></label>
+    <input type="text" name="gender" required>
+    <label for="birthdate"><b>Birthdate</b></label>
+    <input type="date" id="birthdate" name="birthdate" required onchange="calculateAge()">
+    <label for="age"><b>Age</b></label>
+    <input type="text" id="age" name="age" readonly>
+    <label for="em"><b>Email Address</b></label>
+    <input type="text" name="em" required>
+    <label for="pass"><b>Password</b></label>
+    <input type="password" name="pass" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" 
+       title="Password must contain at least 8 characters, including at least one uppercase letter, one lowercase letter, one number, and one special character" 
+       required>
+        
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+  </div>
+</form>
+</body>
+</html>
